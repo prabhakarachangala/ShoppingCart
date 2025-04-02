@@ -1,0 +1,7 @@
+D:\POC\Earnings\ShoppingCart\ShoppingCart\ShoppingCart\obj\Debug\net5.0\ShoppingCart.GeneratedMSBuildEditorConfig.editorconfig
+D:\POC\Earnings\ShoppingCart\ShoppingCart\ShoppingCart\obj\Debug\net5.0\ShoppingCart.AssemblyInfoInputs.cache
+D:\POC\Earnings\ShoppingCart\ShoppingCart\ShoppingCart\obj\Debug\net5.0\ShoppingCart.AssemblyInfo.cs
+D:\POC\Earnings\ShoppingCart\ShoppingCart\ShoppingCart\obj\Debug\net5.0\ShoppingCart.csproj.CoreCompileInputs.cache
+D:\POC\Earnings\ShoppingCart\ShoppingCart\ShoppingCart\obj\Debug\net5.0\ShoppingCart.MvcApplicationPartsAssemblyInfo.cache
+D:\POC\Earnings\ShoppingCart\ShoppingCart\ShoppingCart\obj\Debug\net5.0\ShoppingCart.RazorAssemblyInfo.cache
+D:\POC\Earnings\ShoppingCart\ShoppingCart\ShoppingCart\obj\Debug\net5.0\ShoppingCart.RazorAssemblyInfo.cs

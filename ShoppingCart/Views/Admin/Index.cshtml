@@ -1,0 +1,33 @@
+﻿@model IEnumerable<User>
+
+<h2>Manage Users</h2>
+
+<a asp-action="Create" class="btn btn-primary">Register New User</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Username</td>
+                <td>@user.Role</td>
+                <td>@(user.IsActive ? "Active" : "Inactive")</td>
+                <td>
+                    <form method="post" asp-action="ToggleUserActivation" asp-route-id="@user.Id" onsubmit="return confirm('Are you sure you want to change the status?');">
+                        <button type="submit" class="btn btn-warning">
+                            @(user.IsActive ? "Deactivate" : "Activate")
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

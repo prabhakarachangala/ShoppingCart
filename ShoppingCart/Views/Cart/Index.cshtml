@@ -1,0 +1,28 @@
+﻿@model IEnumerable<dynamic>
+
+<h2>Your Cart</h2>
+
+<a asp-controller="Cart" asp-action="Cart" class="btn btn-primary">Continue Shopping</a>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductName</td>
+                <td>@item.Quantity</td>
+                <td>$@item.Price</td>
+                <td>$@(item.Price * item.Quantity)</td>
+            </tr>
+        }
+    </tbody>
+</table>

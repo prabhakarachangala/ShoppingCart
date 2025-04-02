@@ -1,0 +1,29 @@
+﻿@model IEnumerable<User>
+
+<h2>Manage Sellers</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var seller in Model)
+        {
+            <tr>
+                <td>@seller.Username</td>
+                <td>@(seller.IsActive ? "Active" : "Inactive")</td>
+                <td>
+                    <form method="post" asp-action="ToggleSellerActivation" asp-route-id="@seller.Id" onsubmit="return confirm('Are you sure you want to change the status?');">
+                        <button type="submit" class="btn btn-warning">
+                            @(seller.IsActive ? "Deactivate" : "Activate")
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

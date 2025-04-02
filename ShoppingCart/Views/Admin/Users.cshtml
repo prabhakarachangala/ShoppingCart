@@ -1,0 +1,38 @@
+﻿@model IEnumerable<User> 
+
+@{
+    ViewData["Title"] = "Users Management";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Username</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td>@user.Username</td>
+                <td>@user.Role</td>
+                <td>@(user.IsActive ? "Active" : "Inactive")</td>
+                <td>
+                    <!-- Button to toggle activation status -->
+                    <form method="post" action="@Url.Action("ToggleUserActivation", "Admin", new { id = user.Id })">
+                        <button type="submit" class="btn btn-warning">
+                            @(user.IsActive ? "Deactivate" : "Activate")
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

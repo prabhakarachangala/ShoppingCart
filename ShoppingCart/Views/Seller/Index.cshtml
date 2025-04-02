@@ -1,0 +1,37 @@
+﻿@model IEnumerable<ShoppingCart.Models.Product>
+
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h1>Product List</h1>
+
+<p>Click below to add a new product.</p>
+<a href="/Seller/AddProduct" class="btn btn-success">Add Product</a>
+
+<div class="row">
+    @if (!Model.Any())  // This checks if the collection is empty (returns true if no elements)
+    {
+        <div class="col-12 text-center">
+            <h3>No products available.</h3>
+        </div>
+    }
+    else
+    {
+        @foreach (var product in Model)
+        {
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="@product.ImageUrl" class="card-img-top" alt="@product.Name" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>
+                        <p class="card-text">@product.Description</p>
+                        <p class="card-text"><strong>Price: </strong>@product.Price.ToString("C")</p>
+                        @* <p class="card-text"><strong>Seller: </strong>@product.Seller.Name</p> *@
+                        @* <a href="/Cart/AddToCart/@product.Id" class="btn btn-primary">Add to Cart</a> *@
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>

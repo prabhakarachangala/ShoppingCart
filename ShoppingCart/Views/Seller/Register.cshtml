@@ -1,0 +1,31 @@
+﻿@model SellerProfile
+
+@{
+    ViewData["Title"] = "Seller Registration";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Register" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <input type="text" id="Name" name="Name" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" id="Email" name="Email" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label for="ContactNumber">Contact Number</label>
+        <input type="text" id="ContactNumber" name="ContactNumber" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Address">Address</label>
+        <textarea id="Address" name="Address" class="form-control" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>

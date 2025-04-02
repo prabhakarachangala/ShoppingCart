@@ -1,0 +1,26 @@
+﻿@model ShoppingCart.Models.User
+
+<h2>Register User</h2>
+
+<form asp-action="Create">
+    <label>Username:</label>
+    <input asp-for="Username" class="form-control" required />
+
+    <label>Name:</label>
+    <input asp-for="Name" class="form-control" required />
+
+    <label>Email:</label>
+    <input asp-for="Email" class="form-control" required />
+
+    <label>Password:</label>
+    <input asp-for="Password" class="form-control" type="password" required />
+
+    <label>Role:</label>
+    <select asp-for="Role" class="form-control">
+        <option>Admin</option>
+        <option>Seller</option>
+        <option>Buyer</option>
+    </select>
+
+    <button type="submit" class="btn btn-success">Register</button>
+</form>

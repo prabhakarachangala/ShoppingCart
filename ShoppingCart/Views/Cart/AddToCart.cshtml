@@ -1,0 +1,14 @@
+﻿@model Product
+
+<h2>Item Added to Cart</h2>
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">@Model.Name</h4>
+        <p class="card-text">Price: $@Model.Price</p>
+        <p class="text-success">The product has been added to your cart.</p>
+
+        <a asp-controller="Cart" asp-action="Index" class="btn btn-primary">View Cart</a>
+        <a asp-controller="Cart" asp-action="Cart" class="btn btn-secondary">Continue Shopping</a>
+    </div>
+</div>
